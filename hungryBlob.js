@@ -222,9 +222,8 @@ var test=function(){
 	if (is_predator) {
 	    startX = 300;
 	    startY = 300;
-	    
-	}
-        var boid = new Boid(i, startX, startY, space, is_predator);
+    }
+    var boid = new Boid(i, startX, startY, space, is_predator);
 	//if (i == 10){boid.speed = 0;}
 	
 	var laxDistance = 10;
