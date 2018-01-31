@@ -243,6 +243,9 @@ var test=function(){
     
     
     var canvas = document.getElementById("myCanvas");
+    var ctx = canvas.getContext("2d");
+    ctx.fillStyle = "gray";
+    ctx.fillRect(0, 0, canvas.width, canvas.height);
     setInterval(function(){ 
         scheduler.update();
 
