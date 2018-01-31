@@ -39,7 +39,7 @@ var test=function(){
         this.size = new jssim.Vector2D(5, 5);
         this.color = '#00ff00';
         if(isPredator){
-            this.color = '#eeff00';
+            this.color = '#00ffff';
             this.size = new jssim.Vector2D(8, 8);
 	    this.bands = bands;
         }
