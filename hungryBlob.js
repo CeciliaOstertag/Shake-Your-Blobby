@@ -39,7 +39,7 @@ var test=function(){
         this.size = new jssim.Vector2D(5, 5);
         this.color = '#00ff00';
         if(isPredator){
-            this.color = '#00ffff';
+            this.color = '#eeff00';
             this.size = new jssim.Vector2D(8, 8);
 	    this.bands = bands;
         }
@@ -188,7 +188,7 @@ var test=function(){
     
     //
     Boid.prototype.draw = function(context, pos) {
-        context.fillStyle="#00ffff";
+        context.fillStyle="#000000";
         var size = 1;
         
         //context.fillRect(pos.x, worldHeight - pos.y, width, height);
@@ -243,14 +243,11 @@ var test=function(){
     
     
     var canvas = document.getElementById("myCanvas");
-    var ctx = canvas.getContext("2d");
     setInterval(function(){ 
-        ctx.fillStyle = "gray";
-        ctx.fillRect(0, 0, canvas.width, canvas.height);
         scheduler.update();
 
         space.render(canvas);
-        //console.log('current simulation time: ' + scheduler.current_time);
+        console.log('current simulation time: ' + scheduler.current_time);
         document.getElementById("simTime").value = "Simulation Time: " + scheduler.current_time;
     }, 100);
 };
