@@ -188,7 +188,7 @@ var test=function(){
     
     //
     Boid.prototype.draw = function(context, pos) {
-        context.fillStyle="#000000";
+        context.fillStyle="#00ffff";
         var size = 1;
         
         //context.fillRect(pos.x, worldHeight - pos.y, width, height);
@@ -244,13 +244,13 @@ var test=function(){
     
     var canvas = document.getElementById("myCanvas");
     var ctx = canvas.getContext("2d");
-    ctx.fillStyle = "gray";
-    ctx.fillRect(0, 0, canvas.width, canvas.height);
     setInterval(function(){ 
+        ctx.fillStyle = "gray";
+        ctx.fillRect(0, 0, canvas.width, canvas.height);
         scheduler.update();
 
         space.render(canvas);
-        console.log('current simulation time: ' + scheduler.current_time);
+        //console.log('current simulation time: ' + scheduler.current_time);
         document.getElementById("simTime").value = "Simulation Time: " + scheduler.current_time;
     }, 100);
 };
