@@ -2,4 +2,4 @@
 Simulation du déplacement d'un Physarum polycephalum
 
 
-[HTML DEMO of our blob](https://rawgit.com/Anthagonas/Shake-Your-Blobby/master/example_draw.html)
+[HTML DEMO of this baby blob](https://rawgit.com/CeciliaOstertag/Shake-Your-Blobby/master/almostAGreatBlob.html)
