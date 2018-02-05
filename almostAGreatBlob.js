@@ -207,25 +207,23 @@ var test=function(){
     scheduler.reset();
     var space = new jssim.Space2D();
     space.reset();
-    numBoids = 100;
+    numPred = 100;
+    numPrey = 2;
 
     var bands = new jssim.Network(numBoids);
     space.network = bands;
 
 
-   
+    var boid = new Boid(0, 300, 450, space, is_predator=False);
+    var boid = new Boid(1, 450, 300, space, is_predator=False);
 
     
-    for (var i = 0; i < numBoids; i++) {
-        var is_predator = i > 3;
+    for (var i = numPrey; i < numPred; i++) {
+        var is_predator = True;
 	var startX = getRandomInt(300, 450);
 	var startY = getRandomInt(300, 450);
-	
-	if (is_predator) {
-	    startX = centerX + radius*Math.cos(2*Math.PI*(i/numBoids));
-	    startY = centerY + radius*Math.sin(2*Math.PI*(i/numBoids));
-	    
-	}
+	startX = centerX + radius*Math.cos(2*Math.PI*(i/numBoids));
+	startY = centerY + radius*Math.sin(2*Math.PI*(i/numBoids));
         var boid = new Boid(i, startX, startY, space, is_predator);
 	//if (i == 10){boid.speed = 0;}
 	
