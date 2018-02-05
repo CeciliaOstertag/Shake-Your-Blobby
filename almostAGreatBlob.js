@@ -214,12 +214,12 @@ var test=function(){
     space.network = bands;
 
 
-    var boid = new Boid(0, 300, 450, space, is_predator=False);
-    var boid = new Boid(1, 450, 300, space, is_predator=False);
+    var boid = new Boid(0, 300, 450, space, is_predator=false);
+    var boid = new Boid(1, 450, 300, space, is_predator=false);
 
     
     for (var i = numPrey; i < numPred; i++) {
-        var is_predator = True;
+        var is_predator = true;
 	var startX = getRandomInt(300, 450);
 	var startY = getRandomInt(300, 450);
 	startX = centerX + radius*Math.cos(2*Math.PI*(i/numBoids));
